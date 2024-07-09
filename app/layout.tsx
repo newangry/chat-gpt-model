@@ -42,13 +42,13 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-   
-     <div className="bg-[#0F172A]">
+
+          <div className="bg-[#0F172A]">
             <main className="container mx-auto max-w-7xl py-16 px-6 flex-grow ">
               {children}
             </main>
-         
-            </div>
+
+          </div>
         </Providers>
       </body>
     </html>

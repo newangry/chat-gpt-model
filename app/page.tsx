@@ -55,11 +55,11 @@ export default function Home() {
     }
   }, [response]);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setError("");
     try {
@@ -102,7 +102,7 @@ export default function Home() {
           <div className="mb-4">
             <h2 className="text-xl font-bold mb-2">II. Reason htmlFor Assessment</h2>
             <label htmlFor="description_of_symptoms" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Description of symptoms</label>
-            <textarea name="description_of_symptoms" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1  focus:ring-primary-500  bg-[#293548]" rows="3"
+            <textarea name="description_of_symptoms" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1  focus:ring-primary-500  bg-[#293548]" rows={3}
              onChange={handleChange}></textarea>
             <label htmlFor="duration_of_symptoms" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Duration of symptoms</label>
             <input name="duration_of_symptoms" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange} />
@@ -116,7 +116,7 @@ export default function Home() {
             <input name="current_physical_health" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange} />
 
             <label htmlFor="past_diagnoses_and_treatments" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Past diagnoses and treatments</label>
-            <textarea name="past_diagnoses_and_treatments" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1  focus:ring-primary-500  bg-[#293548]" rows="3"
+            <textarea name="past_diagnoses_and_treatments" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1  focus:ring-primary-500  bg-[#293548]" rows={3}
             onChange={handleChange} ></textarea>
             <label htmlFor="current_medications" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Current medications</label>
             <input name="current_medications" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange}/>
