@@ -4,10 +4,10 @@ import axios from "axios";
 
 export default function Home() {
   const [formData, setFormData] = useState({
-    birthday: "",
+    strength: "",
+    other: "",
     gender: "",
     occupation: "",
-    contact: "",
     description_of_symptoms: "",
     duration_of_symptoms: "",
     impact_on_daily_life: "",
@@ -20,7 +20,6 @@ export default function Home() {
     any_history: "",
     diet_and_exercise_habits: "",
     sleep_patterns: "",
-    use_of_alcohol_or_substances: "",
     stress_levels_sources: "",
     relationship_with_family_friends: "",
     living_situation: "",
@@ -88,15 +87,14 @@ export default function Home() {
 
             <h2 className="text-xl font-bold mb-2">I. Basic</h2>
 
-            <label htmlFor="birthday" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Birthday</label>
-            <input name="birthday" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange}/>
-
             <label htmlFor="gender" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Gender</label>
             <input name="gender" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text"onChange={handleChange} />
             <label htmlFor="occupation" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Occupation</label>
             <input name="occupation" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange}/>
-            <label htmlFor="contact" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Contact Information</label>
-            <input name="contact" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange}/>
+            <label htmlFor="strength" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Strengh</label>
+            <input name="strength" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text"onChange={handleChange} />
+            <label htmlFor="other" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Other</label>
+            <input name="other" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text"onChange={handleChange} />
 
           </div>
           <div className="mb-4">
@@ -140,8 +138,6 @@ export default function Home() {
             <input name="diet_and_exercise_habits" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange}/>
             <label htmlFor="sleep_patterns" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Sleep patterns</label>
             <input name="sleep_patterns" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange} />
-            <label htmlFor="use_of_alcohol_or_substances" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Use of alcohol, tobacco, or other substances</label>
-            <input name="use_of_alcohol_or_substances" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange} />
             <label htmlFor="stress_levels_sources" className="block text-sm font-medium text-gray-700 dark:text-slate-400">Stress levels and sources of stress</label>
             <input name="stress_levels_sources" className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-500 bg-[#293548] " type="text" onChange={handleChange} />
 
