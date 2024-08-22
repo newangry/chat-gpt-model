@@ -53,7 +53,7 @@ export default function Home() {
       eatingDisorders: "",
     },
   });
-  
+
   const [response, setResponse] = useState("");
   const [animatedResponse, setAnimatedResponse] = useState("");
   const [error, setError] = useState("");
@@ -111,50 +111,56 @@ export default function Home() {
         <div className="bg-[#1E293B] space-y-8 divide-y divide-gray-200 px-4 py-5 dark:divide-slate-200/5 sm:p-6">
           <div className="mb-4">
             <h2 className="text-xl font-bold mb-2">Client Information</h2>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            
+            <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Full Name
             </label>
             <input
+              id="fullName"
               name="fullName"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="dateOfBirth" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Date of Birth
             </label>
             <input
+              id="dateOfBirth"
               name="dateOfBirth"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="date"
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="gender" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Gender
             </label>
             <input
+              id="gender"
               name="gender"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="dateOfAssessment" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Date of Assessment
             </label>
             <input
+              id="dateOfAssessment"
               name="dateOfAssessment"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="date"
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="referralSource" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Referral Source
             </label>
             <input
+              id="referralSource"
               name="referralSource"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
@@ -164,10 +170,11 @@ export default function Home() {
 
           <div className="mb-4">
             <h2 className="text-xl font-bold mb-2">Social History</h2>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="maritalStatus" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Marital Status
             </label>
             <input
+              id="maritalStatus"
               name="maritalStatus"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
@@ -175,10 +182,11 @@ export default function Home() {
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="spouse" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Do you have a spouse?
             </label>
             <input
+              id="spouse"
               name="spouse"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
@@ -186,10 +194,11 @@ export default function Home() {
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="children" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Do you have any children?
             </label>
             <input
+              id="children"
               name="children"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
@@ -197,10 +206,11 @@ export default function Home() {
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="homeResidents" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Who lives with you in your home?
             </label>
             <input
+              id="homeResidents"
               name="homeResidents"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
@@ -208,20 +218,22 @@ export default function Home() {
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="highestEducation" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Highest Grade, Diploma, or Degree Completed
             </label>
             <input
+              id="highestEducation"
               name="highestEducation"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="currentOccupation" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Current Occupation
             </label>
             <input
+              id="currentOccupation"
               name="currentOccupation"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
@@ -231,50 +243,55 @@ export default function Home() {
 
           <div className="mb-4">
             <h2 className="text-xl font-bold mb-2">Presenting Concerns</h2>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="symptomDescription" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Describe the symptoms for which you’re seeking help
             </label>
             <textarea
+              id="symptomDescription"
               name="symptomDescription"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               rows={3}
               onChange={handleChange}
             ></textarea>
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="symptomOnset" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               When did you first experience the above symptoms?
             </label>
             <input
+              id="symptomOnset"
               name="symptomOnset"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="dailyImpact" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               How are these symptoms affecting your daily life?
             </label>
             <input
+              id="dailyImpact"
               name="dailyImpact"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="symptomCause" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               What do you think may have caused the symptoms?
             </label>
             <input
+              id="symptomCause"
               name="symptomCause"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="specialistSeen" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               Have you ever seen a specialist to help with the above problem(s)?
             </label>
             <input
+              id="specialistSeen"
               name="specialistSeen"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
@@ -282,30 +299,33 @@ export default function Home() {
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="specialistDuration" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               For how long did you see the specialist(s)?
             </label>
             <input
+              id="specialistDuration"
               name="specialistDuration"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
               onChange={handleChange}
             />
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="specialistConclusions" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               What were your specialist(s) conclusions and recommendations?
             </label>
             <textarea
+              id="specialistConclusions"
               name="specialistConclusions"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               rows={3}
               onChange={handleChange}
             ></textarea>
 
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+            <label htmlFor="treatmentGoals" className="block text-sm font-medium text-gray-700 dark:text-slate-400">
               What are your treatment goals?
             </label>
             <input
+              id="treatmentGoals"
               name="treatmentGoals"
               className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
               type="text"
@@ -358,10 +378,11 @@ export default function Home() {
               },
             ].map((item) => (
               <div key={item.name}>
-                <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+                <label htmlFor={`currentSymptoms.${item.name}`} className="block text-sm font-medium text-gray-700 dark:text-slate-400">
                   {item.label}
                 </label>
                 <input
+                  id={`currentSymptoms.${item.name}`}
                   name={`currentSymptoms.${item.name}`}
                   className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
                   type="text"
