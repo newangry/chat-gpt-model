@@ -335,9 +335,7 @@ export default function Home() {
 
           <div className="mb-4">
             <h2 className="text-xl font-bold mb-2">Additional Information</h2>
-            <label className="block text-sm font-medium text-gray-700 dark:text-slate-400">
-              Current Symptoms Checklist
-            </label>
+        
             {[
               { label: "Do you feel depressed or blue?", name: "depressed" },
               {
