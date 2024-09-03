@@ -51,6 +51,16 @@ export default function Home() {
       suicideAttemptHistory: "",
       selfHarm: "",
       eatingDisorders: "",
+      appearance: "",
+      speech: "",
+      mood: "",
+      affect: "",
+      process: "",
+      content: "",
+      perceptions: "",
+      cognition: "",
+      insight: "",
+      judgment: "",
     },
   });
 
@@ -385,6 +395,36 @@ export default function Home() {
                   className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
                   type="text"
                   placeholder="[Yes/No]"
+                  onChange={handleChange}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="mb-4">
+            <h2 className="text-xl font-bold mb-2">Progress Notes</h2>
+            {[
+              { label: "Appearance and Behavior", name: "appearance", placeHolder: "Assess the client’s overall appearance, grooming, posture, and movements." },
+              { label: "Speech and Language", name: "speech", placeHolder: "Observe speech rate, fluency, coherence, and any language abnormalities." },
+              { label: "Mood", name: "mood", placeHolder: "Explore the client’s emotional state (e.g., sad, anxious, elated)." },
+              { label: "Affect", name: "affect", placeHolder: "Evaluate the emotional expression (e.g., flat, blunted, labile)." },
+              { label: "Thought Process", name: "process", placeHolder: "Investigate the flow and organization of thoughts (e.g., logical, tangential, circumstantial)." },
+              { label: "Thought Content", name: "content", placeHolder: "Discuss the content of the client’s thoughts (e.g., delusions, obsessions, suicidal ideation)." },
+              { label: "Perceptions", name: "perceptions", placeHolder: "Inquire about hallucinations (e.g., auditory, visual)." },
+              { label: "Cognition", name: "cognition", placeHolder: "Assess memory, attention, concentration, and reasoning abilities." },
+              { label: "Insight", name: "insight", placeHolder: "Determine the client’s awareness of their condition." },
+              { label: "Judgment", name: "judgment", placeHolder: "Evaluate decision-making and problem-solving skills." },
+            ].map((item) => (
+              <div key={item.name}>
+                <label htmlFor={`currentSymptoms.${item.name}`} className="block text-sm font-medium text-gray-700 dark:text-slate-400">
+                  {item.label}
+                </label>
+                <input
+                  id={`currentSymptoms.${item.name}`}
+                  name={`currentSymptoms.${item.name}`}
+                  type="text"
+                  className="w-full px-3 py-2 text-white border-1 border-gray-500 rounded-lg bg-[#293548]"
+                  placeholder={item.placeHolder}
                   onChange={handleChange}
                 />
               </div>
