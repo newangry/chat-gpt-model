@@ -114,7 +114,7 @@ Jane’s assessment reveals a significant impact of anxiety and depressive sympt
 
 
 
-Please ensure that the output includes a Current Symptoms Checklist and uses <br> tags to separate each topic and confirm once again you just followed the sample output format. If you got the empty survey data pls say sorry and can't display that data`;
+Please ensure that the output includes a Current Symptoms Checklist and uses <br> tags to separate each topic and confirm once again you just followed the sample output format.`;
 
   // Return the prompts as an array
   return [promptPart1];
